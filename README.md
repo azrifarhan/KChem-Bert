@@ -1,2 +1,8 @@
 # KChem-Bert
 Enhancing Zero Shot Bert to cluster &amp; classify drugs by injecting triples from chemical corpus 
+
+**Problem:**
+Imagine a scenario where there is a lack of domain specific labeled data that can be used to fine tune a language model for a classification task and an unknown number of classes. Proposed to utilize a pretrained small language model but enhances it by injecting context in the form of triples from a knowledge graph. At the same time, due to a lack of knowledge in the possible classes, we use the context aware embedding output from the language model to be used as a parameter for an unsupervised clustering algortihm.
+
+**Why**
+Imagine a scenario where a data analyst with very basic chemical knowledge has to go through a list of thousands of drugs with complicated or advanced chemical compounds and classify them into a specific category. While the analyst will have a general idea of compounds such as ibuprofen or oxycodone, they will require more context on each of the chemicals to determine the class of each drug. Now, if a chemist sits next to the analyst and help provide information on said chemicals, the calssification will be more accurate and faster. However, if the analyst were to go through the path of reading on each of the chemicals, it will take an exponentially longer time. The concept applies the same to a pretrained language model that has generalized knowledge from the variety of copra it was trained on. Fine tuning it with domain specific knowledge will take enormous time and cost. Therefore, we enhance the generalized ability of a pretrained model with domain specific contexts for a more accurate, less resource intensive classification task.
